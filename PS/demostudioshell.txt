@@ -1,0 +1,3 @@
+#Demo Studio Shell
+#Demo Out-Chart Cmdlet
+get-process | sort -property WS | select -first 5 | out-chart -Type Pie -GroupAxis Name -DataAxis WS
