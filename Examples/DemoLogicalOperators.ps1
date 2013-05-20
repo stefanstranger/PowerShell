@@ -6,4 +6,4 @@
 #Compare the differences
 if ((5 -lt 4) -and (1..10000 | % {if ($_ -eq "never"){}})){} #takes not long because left-hand is false
 
-if ((3 -lt 4) -and (1..10000 | % {if ($_ -eq "never"){}})){} #take some time to finish
+if ((3 -lt 4) -and (1..10000 | % {if ($_ -eq "never"){}})){} #takes some time to finish
