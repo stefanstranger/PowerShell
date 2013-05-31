@@ -8,7 +8,7 @@
    Test-DNSSec -DomainName www.verisign.com
 .EXAMPLE
    Test-DNSSec -DomainName www.stranger.nl
-.LINKS
+.LINK
    http://dnssec-debugger.verisignlabs.com/
 #>
 function Test-Dnssec
