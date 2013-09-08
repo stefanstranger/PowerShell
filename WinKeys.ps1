@@ -9,7 +9,7 @@
 # Idea to use PInvoke from StackOverflow
 # http://stackoverflow.com/questions/6407584/sendkeys-send-and-windows-key
 # http://stackoverflow.com/questions/742262/what-can-i-do-with-c-sharp-and-powershell
-# http://ericnelson.wordpress.com/2012/03/12/my-favourite-windows-8-shortcut-keys/
+# http://www.technofileonline.com/texts/tec083009.html
 # ---------------------------------------------------
 
 
