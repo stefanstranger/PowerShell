@@ -1,14 +1,15 @@
 ﻿# ---------------------------------------------------
 # Script: WinKeys.ps1
-# Version: 0.1
+# Version: 0.2
 # Author: Stefan Stranger
-# Date: 09-06-2013
+# Date: 09-08-2013
 # Description: PowerShell Script with Function called Win to run WinKey Combinations from PowerShell
 # Comments: Use this in RDP Sessions from within PowerShell
 # Video usage url: http://www.youtube.com/watch?v=sI5h3ZGRAtI
 # Idea to use PInvoke from StackOverflow
 # http://stackoverflow.com/questions/6407584/sendkeys-send-and-windows-key
 # http://stackoverflow.com/questions/742262/what-can-i-do-with-c-sharp-and-powershell
+# http://ericnelson.wordpress.com/2012/03/12/my-favourite-windows-8-shortcut-keys/
 # ---------------------------------------------------
 
 
