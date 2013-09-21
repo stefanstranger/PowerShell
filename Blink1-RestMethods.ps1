@@ -98,7 +98,7 @@ Function Get-Blink1Id
 
 Function Get-Blink1IFTTT
 {
-    $ifttt = Invoke-RestMethod "http://api.thingm.com/blink1/events/0D9CDDFF1A001EC2"
+    $ifttt = Invoke-RestMethod "http://api.thingm.com/blink1/events/{code}
 
     $ifttt.events | select blink1_id, name, source, @{L="Date";E={[timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($ifttt.events.date))}}
 }
