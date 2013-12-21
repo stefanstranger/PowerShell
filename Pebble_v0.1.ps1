@@ -1,6 +1,7 @@
+#Dot library for Pebble by https://github.com/barometz/flint/
 ﻿add-type -Path "C:\Users\stefstr\Documents\GitHub\flintlock\flint\flint.dll"
 
-$pebble = new-object -TypeName flint.Pebble("COM4","692E")
+$pebble = new-object -TypeName flint.Pebble("COM4","[PebbleID]")
 
 $pebble.Connect()
 
