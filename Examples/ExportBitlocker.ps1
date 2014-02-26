@@ -25,15 +25,20 @@
    "c:","d:" | Backup-BitlockerToOneDrive | export-csv -path c:\temp\bitlocker.csv -notypeinformation -Append
    Exports and appends the Bitlocker keys for Driveletter C: and D: using the pipeline to bitlocker.csv file on c:\temp folder without any typeinformation with verbose info 
 .EXAMPLE
-   #Register BackupBitlocker Job
-   Register-ScheduledJob -name BackupBitlocker -ScriptBlock {. \C:\Scripts\PS\Bitlocker\bitlocker.ps1;Backup-BitlockerToOneDrive -DriveLetter C: | export-csv -path C:\users\stefstr\SkyDrive\Bitlocker\backupbitlocker.csv -Append}
+    #Function need to run elevated. Let's create an option
+    $option = New-ScheduledJobOption -RunElevated 
 
-   #Create Trigger
-   $4amtrigger = New-JobTrigger -At  4pm -Daily
+    #Register BackupBitlocker Job
+    Register-ScheduledJob -name BackupBitlocker -ScriptBlock {
+        . C:\Scripts\PS\Bitlocker\ExportBitlocker.ps1
+        Backup-BitlockerToOneDrive -DriveLetter C: | export-csv -path C:\users\stefstr\SkyDrive\Bitlocker\backupbitlocker.csv -Append
+    } -ScheduledJobOption $option
 
-   #Associate a Job Trigger
-   Add-JobTrigger -Name BackupBitlocker -Trigger $4amtrigger
-   Create a scheduled job to call Bitlocker Function every day at 4 PM.
+    #Create Trigger
+    $4amtrigger = New-JobTrigger -At  4pm -Daily
+
+    #Associate a Job Trigger
+    Add-JobTrigger -Name BackupBitlocker -Trigger $4amtrigger
 #>
 function Backup-BitlockerToOneDrive
 {
