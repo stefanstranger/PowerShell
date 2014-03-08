@@ -1,0 +1,1 @@
+Download BgInfo.zip from http://technet.microsoft.com/en-us/sysinternals/bb897557.aspx and put in this location.
