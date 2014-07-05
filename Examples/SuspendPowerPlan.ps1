@@ -1,4 +1,4 @@
-﻿﻿# ---------------------------------------------------
+﻿#﻿ ---------------------------------------------------
 # Script: C:\Users\stefstr\Documents\GitHub\PowerShell\Examples\SuspendPowerPlan.ps1
 # Version: 0.1
 # Author: Stefan Stranger
