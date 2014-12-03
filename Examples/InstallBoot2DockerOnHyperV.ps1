@@ -1,4 +1,6 @@
-﻿# ---------------------------------------------------
+﻿#Require Administrator
+
+# ---------------------------------------------------
 # Script: C:\Users\stefstr\Documents\GitHub\PowerShell\Examples\InstallBoot2DockerOnHyperV.ps1
 # Version: 0.1
 # Author: Stefan Stranger
@@ -14,13 +16,19 @@
 
 #Variables
 $vmname = "Boot2Docker"
-$vhdpath = "D:\VMs\$vmname\Virtual Disks"
+$vhdpath = "D:\VMs\$vmname\Virtual Disks\boot2docker.vhdx"
 $VMPath = "D:\VMs"
 $VMSwitch = "Intel(R) Centrino(R) Advanced-N 6205 Virtual Switch"
 $Boot2DockerISO = "D:\ISOs\boot2docker.iso"
 
+New-item "D:\VMs\$vmname\Virtual Disks" -Type Directory
 
-New-VM –Name $vmname –MemoryStartupBytes 1GB -Path $VMPath -Generation 1
+
+New-VHD -Path $vhdpath –Dynamic –SizeBytes 2GB
+
+New-VM –Name $vmname –MemoryStartupBytes 1GB -NoVHD -Generation 1
+
+Add-VMHardDiskDrive $vmname -Path $vhdpath
 
 Add-VMNetworkAdapter -VMName $vmname -SwitchName $VMSwitch
 
