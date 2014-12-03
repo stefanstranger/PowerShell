@@ -1,6 +1,4 @@
-﻿#Require Administrator
-
-# ---------------------------------------------------
+﻿# ---------------------------------------------------
 # Script: C:\Users\stefstr\Documents\GitHub\PowerShell\Examples\InstallBoot2DockerOnHyperV.ps1
 # Version: 0.1
 # Author: Stefan Stranger
