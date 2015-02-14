@@ -13,6 +13,8 @@ For more information about WinMerge go to: http://winmerge.org/
 # Install
 First install WinMerge using PowerShell OneGet or manually from http://winmerge.org
 
+Install ShowUI module from https://showui.codeplex.com/
+
 Change the following part of the WINMerge_WPF.ps1 file
 ..
 $exe = "C:\Program Files (x86)\WinMerge\WinMergeU.exe"
