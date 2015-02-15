@@ -17,4 +17,4 @@
     AddOnsMenu.
     SubMenus.
     Add("Open WINMERGE",
-{C:\Users\stefstr\Documents\GitHub\PowerShell\WinMergeISEAddOn\WINMerge_WPF.ps1} , "ALT+W")
+{. C:\Users\stefstr\Documents\GitHub\PowerShell\WinMergeISEAddOn\WINMerge_WPF.ps1} , "ALT+W")
