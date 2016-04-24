@@ -1,5 +1,7 @@
 ﻿#Install MineCraft in Container
 #Steps from https://www.youtube.com/watch?v=J8Sw_xLPBE8
+#More info: http://www.shotgunventure.com/?p=132
+#Credits: Mitch Melton
 
 #Create new VMSwitch
 New-VMSwitch -Name DHCP -NetAdapterName Ethernet0
